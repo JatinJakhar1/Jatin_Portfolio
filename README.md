@@ -5,7 +5,7 @@ A modern and responsive **personal portfolio website** built using **HTML, CSS, 
 ---
 
 ## 🚀 Live Demo
-
+https://jatinjakhar1.github.io/Jatin_Portfolio/
 
 ---
 
@@ -57,10 +57,7 @@ jatin_portfolio/
 
 ## 📸 Screenshots
 
-
-```md
-![Portfolio Preview]![alt text](image.png)
-```
+[alt text](image.png)
 
 ---
 
