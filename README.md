@@ -52,15 +52,6 @@ jatin_portfolio/
 │   ├── blog-images/
 │   └── resume / favicon
 ```
-
----
-
-## 📸 Screenshots
-
-[alt text](image.png)
-
----
-
 ## ⚙️ Getting Started
 
 ### 🔹 Option 1: Open directly
