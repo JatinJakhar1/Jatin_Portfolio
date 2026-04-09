@@ -99,79 +99,185 @@ body {
 .navbar a.active::after {
   width: 100%;
 }
-
-
 /* ================= HERO ================= */
+
 .hero {
-  padding: 160px 0 80px; /* top, bottom */
-  
+  position: relative;
+  min-height: 100vh;
+  padding: 160px 8% 80px;
+
   display: flex;
   align-items: center;
+  justify-content: center;
+
+ background: linear-gradient(
+  180deg,
+  #0e0e0e 0%,
+  #0b0b0b 60%,
+  #080808 100%
+);
+  overflow: hidden;
+}
+
+/* soft background glow (right) */
+.hero::after {
+  content: "";
+  position: absolute;
+  right: 8%;
+  top: 30%;
+  width: 420px;
+  height: 420px;
   background: radial-gradient(
-    circle at top left,
-    #1f1f1f,
-    #111111
+    circle,
+    rgba(56, 189, 248, 0.10),
+    transparent 60%
   );
+  filter: blur(90px);
+  z-index: 0;
 }
 
+/* soft background glow (left) */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -200px;
+  left: -200px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(56, 189, 248, 0.10),
+    transparent 60%
+  );
+  filter: blur(80px);
+  z-index: 0;
+}
+
+/* hero inner layout */
 .hero-content {
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 0 60px;
+  position: relative;
+  z-index: 1;
+
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 40px;
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
-   gap: 100px;  
+  justify-content: space-between;
+  gap: 100px;
 }
 
+/* text block */
+.hero-text {
+  max-width: 560px;
+}
+
+/*role of hero work*/
+.hero-role {
+  display: block;          /* VERY IMPORTANT */
+  margin-bottom: 14px;
+
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.6);
+}
 .hero-text h1 {
-  font-size: 72px;
-  font-weight: 700;
-  letter-spacing: -0.6px;
+  font-size: 76px;
+  font-weight: 800;
+  letter-spacing: -2px;
   color: #ffffff;
 }
 
-
-.hero-subtitle {
-  margin-top: 14px;
-  font-size: 16px;
+.hero-text p {
+  margin-top: 3px;
+  font-size: 18px;
   line-height: 1.7;
-  max-width: 520px;
-
-  /* light black & white look */
-  color: rgba(255, 255, 255, 0.65);
-
-  font-weight: 400;
-  letter-spacing: 0.2px;
+  color: #9ca3af;
 }
 
-/* ===== HERO IMAGE ===== */
-.hero-image img {
-  width: 260px;
-  border-radius: 16px;
-  padding: 6px;
-}
-/*Stylish Button Styles*/
-.btn {
-  padding: 14px 28px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s ease;
+/* resume button */
+.hero-buttons {
+  margin-top: 36px;
 }
 
 .btn.primary {
-  background: linear-gradient(90deg, #a855f7, #06b6d4);
-  color: white;
+  padding: 14px 36px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  transition: all 0.3s ease;
 }
 
-.btn.secondary {
-  border: 1px solid #444;
-  color: white;
+.btn.primary:hover {
+  background: #ffffff;
+  color: #000000;
 }
 
-.btn:hover {
-  transform: translateY(-3px);
+/* hero image */
+.hero-img img {
+  width: 280px;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hero-img img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.75);
+}
+
+/* section divider*/
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.15),
+    transparent
+  );
+  margin: 80px 0;
+}
+/*scroll indicator*/
+.scroll-indicator {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 140px 6% 60px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 60px;
+  }
+
+  .hero-text h1 {
+    font-size: 44px;
+  }
 }
 
 /* ================= MARQUEE ================= */
@@ -635,6 +741,7 @@ body {
   border-radius: 8px;
   border: none;
 
+  
   background: rgba(255,255,255,0.12);
   color: #ffffff;
   font-size: 13px;
@@ -1120,4 +1227,164 @@ blockquote {
 .footer-text {
   font-size: 13px;
   color: #888;
+}
+
+/* ===== FINAL HERO ROLE FIX ===== */
+
+.hero-text {
+  position: relative;
+  z-index: 5;
+}
+
+.hero-role {
+  display: block !important;
+  margin-bottom: 14px;
+
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* =========================
+   LIGHT MODE (ONLY ADDED)
+   DO NOT CHANGE ORIGINAL
+========================= */
+
+body.light {
+  background: radial-gradient(
+    circle at top left,
+    #f5f5f5 0%,
+    #eaeaea 40%,
+    #dcdcdc 100%
+  );
+  color: #111;
+}
+
+/* Navbar */
+body.light .navbar {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.85),
+    rgba(255, 255, 255, 0.65)
+  );
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+body.light .navbar .logo,
+body.light .navbar a.active {
+  color: #000;
+}
+
+body.light .navbar a {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Hero */
+body.light .hero {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f3f3f3 60%,
+    #e8e8e8 100%
+  );
+}
+
+body.light .hero-role {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+body.light .hero-text h1 {
+  color: #000;
+}
+
+body.light .hero-text p {
+  color: #555;
+}
+
+/* Sections */
+body.light .section.dark {
+  background: #f4f4f4;
+}
+
+body.light .section-text,
+body.light .skills-subtext,
+body.light .projects-subtitle {
+  color: #555;
+}
+
+/* Cards */
+body.light .card,
+body.light .skill,
+body.light .project-card,
+body.light .blog-item-card {
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light .card h3,
+body.light .project-card h3,
+body.light .blog-left h3 {
+  color: #000;
+}
+
+body.light .card p,
+body.light .project-card p,
+body.light .blog-left p {
+  color: #555;
+}
+
+/* Contact */
+body.light .contact-card {
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #f3f3f3
+  );
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+body.light .contact-subtext {
+  color: #555;
+}
+
+body.light .email-box input {
+  background: rgba(0, 0, 0, 0.04);
+  color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+body.light .email-box button {
+  background: rgba(0, 0, 0, 0.08);
+  color: #000;
+}
+
+/* Blog Detail */
+body.light .blog-detail {
+  background: #ffffff;
+}
+
+body.light .blog-content p {
+  color: #333;
+}
+
+body.light blockquote {
+  border-left: 3px solid #a855f7;
+  color: #444;
+}
+
+/* Footer */
+body.light .social-links a {
+  color: #333;
+}
+
+body.light .social-links a:hover {
+  color: #000;
+}
+
+body.light .footer-text {
+  color: #555;
 }

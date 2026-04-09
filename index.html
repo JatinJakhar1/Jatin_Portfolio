@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+ 
   <!-- Basic Meta -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,10 +12,10 @@
   <meta name="description" content="Portfolio of Jatin Jakhar — Full-Stack Web Developer building modern, scalable web applications.">
   <meta name="author" content="Jatin Jakhar">
 
-  <!-- Favicon (optional but professional) -->
+  <!-- Favicon -->
   <link rel="icon" href="assets/favicon.png" type="image/png">
 
-  <!-- Fonts (Clean & Professional) -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -35,66 +36,45 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
 
+  <!-- 🌙 Dark / Light Mode Toggle -->
+ 
+<button onclick="document.body.classList.toggle('light')">
+  🌙
+</button>
 </nav>
+
 <div id="main-content">
+
 <!-- HERO -->
 <section id="hero" class="hero">
   <div class="hero-content">
+    
     <div class="hero-text">
+      <span class="hero-role">Full-Stack Web Developer</span>
       <h1>Jatin Jakhar</h1>
       <p class="hero-subtitle">
-        Full-stack web developer building modern, scalable web applications.
+        Setting out on the path to engineering, I am fueled by an unyielding thirst for knowledge and a deep passion for unraveling the mysteries of computer science. With each challenge I encounter, my enthusiasm for innovative problem-solving only grows stronger.
       </p>
-    </div>
 
-    <div class="hero-image">
-      <div class="rect-frame">
-        <img src="jatin.jpeg" height="250" width="250" alt="Jatin Jakhar">
+      <div class="hero-buttons">
+        <a href="jatin_cv_resume.pdf"
+           class="btn primary"
+           target="_blank"
+           download>
+           Download Resume
+        </a>
       </div>
     </div>
 
+    <div class="hero-img">
+      <img src="jatin.jpeg" alt="Jatin Jakhar">
+    </div>
+
   </div>
 </section>
 
-
+<div class="scroll-indicator">Scroll ↓</div>
 <div class="section-divider"></div>
-
-<!-- TOP BLOGS -->
-<section id="blogs" class="section blogs-section">
-
-  <h2 class="section-title">Top Blogs</h2>
-  <p class="section-text">A collection of my most popular blogs.</p>
-<!--  BLOGS 1 -->
-<div class="blog-item-card" onclick="openBlog('blog1')">
-  <div class="blog-left">
-    <h3>Why 100 Lines of Code Can Be Better Than 2 Lines of Code?</h3>
-    <p>
-      In the world of programming, simplicity is often celebrated, but sometimes…
-    </p>
-  </div>
-  <div class="blog-right">
-    <span class="blog-date">05 June, 2025</span>
-    <span class="blog-read">5 min read</span>
-  </div>
-</div>
-
-<!--  BLOGS 2 -->
-<div class="blog-item-card" onclick="openBlog('blog2')">
-  <div class="blog-left">
-    <h3>Learning by Building: Why Projects Teach More Than Tutorials</h3>
-    <p>
-      Why real projects help you learn faster, deeper, and with confidence.
-    </p>
-  </div>
-
-  <div class="blog-right">
-    <span class="blog-date">12 June, 2025</span>
-    <span class="blog-read">4 min read</span>
-  </div>
-</div>
-
-
-</section>
 
 <!-- ABOUT -->
 <section id="about" class="section">
@@ -105,90 +85,53 @@
     I'm a skilled software developer with experience in TypeScript and JavaScript, and expertise in frameworks like React, Node.js, and Three.js. I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!
   </p>
 
- <div class="cards">
+  <div class="cards">
 
-  <div class="card">
-    <img src="assets/frontend.png" alt="Frontend" class="card-icon">
-    <h3>Frontend Developer</h3>
-    <p>Building responsive, user-friendly interfaces</p>
+    <div class="card">
+      <img src="assets/frontend.png" alt="Frontend" class="card-icon">
+      <h3>Frontend Developer</h3>
+      <p>HTML5 <br> CSS3 <br> JavaScript <br> Responsive Design</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/backend.png" alt="Backend" class="card-icon">
+      <h3>Backend Developer</h3>
+      <p>Basic Node.js <br> API Understanding <br> Database Basics</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/programmer.png" alt="Programmer" class="card-icon">
+      <h3>Programmer</h3>
+      <p>C <br> C++ <br> Python <br> Java <br> Problem Solving</p>
+    </div>
+
   </div>
-
-  <div class="card">
-    <img src="assets/backend.png" alt="Backend" class="card-icon">
-    <h3>Backend Developer</h3>
-    <p>Creating scalable APIs and server-side logic</p>
-  </div>
-
-  <div class="card">
-    <img src="assets/programmer.png" alt="    Programmer" class="card-icon">
-    <h3>Programmer</h3>
-    <p>Solving problems with clean and efficient code</p>
-  </div>
-
-</div>
-
 </section>
-
 
 <!-- SKILLS -->
 <section id="skills" class="skills-section dark">
   <h2>Skills.</h2>
 
   <div class="skills-grid">
-
-  <div class="skill">
-    <img src="assets/git.png" alt="Git" class="skill-icon">
-    <span>Git</span>
+    <div class="skill"><img src="assets/git.png" alt="Git" class="skill-icon"><span>Git</span></div>
+    <div class="skill"><img src="assets/html.svg" alt="HTML" class="skill-icon"><span>HTML</span></div>
+    <div class="skill"><img src="assets/css.png" alt="CSS" class="skill-icon"><span>CSS</span></div>
+    <div class="skill"><img src="assets/javascript.png" alt="JavaScript" class="skill-icon"><span>JavaScript</span></div>
+    <div class="skill"><img src="assets/java.png" alt="Java" class="skill-icon"><span>Java</span></div>
+    <div class="skill"><img src="assets/c.png" alt="C" class="skill-icon"><span>C</span></div>
+    <div class="skill"><img src="assets/C++.png" alt="C++" class="skill-icon"><span>C++</span></div>
+    <div class="skill"><img src="assets/python.png" alt="Python" class="skill-icon"><span>Python</span></div>
   </div>
-
-  <div class="skill">
-    <img src="assets/html.svg" alt="HTML" class="skill-icon">
-    <span>HTML</span>
-  </div>
-
-  <div class="skill">
-    <img src="assets/css.png" alt="CSS" class="skill-icon">
-    <span>CSS</span>
-  </div>
-
-  <div class="skill">
-    <img src="assets/javascript.png" alt="JavaScript" class="skill-icon">
-    <span>JavaScript</span>
-  </div>
-
-  <div class="skill">
-    <img src="assets/java.png" alt="Java" class="skill-icon">
-    <span>Java</span>
-  </div>
-
-  <div class="skill">
-    <img src="assets/c.png" alt="C" class="skill-icon">
-    <span>C</span>
-  </div>
-
-  <div class="skill">
-    <img src="assets/C++.png" alt="C++" class="skill-icon">
-    <span>C++</span>
-  </div>
-
-  <div class="skill">
-    <img src="assets/python.png" alt="Python" class="skill-icon">
-    <span>Python</span>
-  </div>
-
-</div>
-
 </section>
 
 <!-- JOURNEY -->
 <section id="journey" class="section dark">
-  <h2>Journey.</h2>
+  <h2>Education.</h2>
   <p class="section-text">
     A quick look at my learning journey, milestones, and experiences.
   </p>
 
   <div class="timeline">
-
     <!-- ===== 2025 ===== -->
     <div class="timeline-year reveal">
       <span class="timeline-dot"></span>
@@ -218,13 +161,6 @@
         </p>
       </div>
 
-      <div class="timeline-item">
-        <h4>Personal Loss 💔</h4>
-        <p>
-          During my 12th grade, I lost my father—a difficult time that taught me resilience,
-          responsibility, and perseverance, inspiring me to carry his values forward.
-        </p>
-      </div>
 
       <div class="timeline-item">
         <h4>Started College 🎓</h4>
@@ -334,6 +270,43 @@ A fast, lightweight tool that instantly counts words and characters (with or wit
 
 <div class="section-line"></div>
 
+<!-- TOP BLOGS -->
+<section id="blogs" class="section blogs-section">
+
+  <h2 class="section-title">Top Blogs</h2>
+  <p class="section-text">A collection of my most popular blogs.</p>
+<!--  BLOGS 1 -->
+<div class="blog-item-card" onclick="openBlog('blog1')">
+  <div class="blog-left">
+    <h3>Why 100 Lines of Code Can Be Better Than 2 Lines of Code?</h3>
+    <p>
+      In the world of programming, simplicity is often celebrated, but sometimes…
+    </p>
+  </div>
+  <div class="blog-right">
+    <span class="blog-date">05 June, 2025</span>
+    <span class="blog-read">5 min read</span>
+  </div>
+</div>
+
+<!--  BLOGS 2 -->
+<div class="blog-item-card" onclick="openBlog('blog2')">
+  <div class="blog-left">
+    <h3>Learning by Building: Why Projects Teach More Than Tutorials</h3>
+    <p>
+      Why real projects help you learn faster, deeper, and with confidence.
+    </p>
+  </div>
+
+  <div class="blog-right">
+    <span class="blog-date">12 June, 2025</span>
+    <span class="blog-read">4 min read</span>
+  </div>
+</div>
+
+
+</section>
+
 
 <!-- CONTACT -->
 <section id="contact" class="contact-section contact-hidden">
@@ -409,8 +382,5 @@ A fast, lightweight tool that instantly counts words and characters (with or wit
 </section>
 
 <script src="script.js"></script>
-
-
-
 </body>
 </html>
